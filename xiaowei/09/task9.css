@@ -1,0 +1,256 @@
+*{margin:0px;padding:0px;}
+body{min-width: 560px;}
+/*将容器的justify-content，align-items设为居中，实现水平垂直居中对齐*/
+.flex-container{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.active{color:white;}
+
+#header{
+	height:50px;
+	padding:5px 60px;
+	background-color:#2189bf;
+}
+
+#logo{
+	width:40px;
+	height:40px;
+	background-color: white;
+}
+
+#logo #RBpart{
+	box-sizing: border-box;
+	width:20px;
+	height:20px;
+	border-top:3px solid #2189bf;
+	border-left:3px solid #2189bf;
+	position:relative;
+	top:20px;
+	left:20px;
+}
+
+
+#searchframe{
+	width:284px;
+	height:24px;
+	display: inline-block;
+	border-radius:15px;
+	margin-right:30px;
+	overflow: auto;
+	background-color: white;
+}
+#searchframe img{width:24px;height: 24px;float:left;border:0px;}
+#searchframe input{
+	width:250px;
+	height:24px;
+	float:left;
+	border:none;
+}
+#SearchUser>img{
+	width:20px;
+	height: 20px;
+}
+
+#content{display: flex;justify-content: flex-start;align-items: stretch;}
+/*1侧栏*/
+#aside{
+	box-sizing: border-box;
+	width:250px;
+	background-color: #2a2e3d; 
+	padding: 20px 40px ;
+	color:#bababe;
+}
+
+/*1-1侧栏用户信息*/
+#UseInfo{
+	width:170px;
+	flex-wrap: wrap;
+	
+}
+
+#UseInfo .flexchild{
+	box-sizing: border-box;
+	width:85px;
+	justify-content: center;
+	margin-bottom:20px;
+}
+
+#outtercircle{
+	width:60px;
+	height:60px;
+	border:1px solid #bababe;
+	border-radius: 29px;
+	justify-content: center;
+}
+#innercircle{
+	width:54px;
+	height:54px;
+	background-color: #bababe;
+	border-radius: 27px;
+}
+#UserName{color:white;font-size:20px;}
+#UseInfo #flex3{border-right:1px solid gray;}
+
+/*1-2侧栏文件导航*/
+#nav ul{padding-left:40px;margin:16px 0px;}
+#nav ul li{margin:16px 0px;}/*因为*{m:0;p:0;}使得ulli没有缩进*/
+
+/*2右侧整个内容部分*/
+#RightContent{
+	width:1099px;
+	background-color: #ccc;
+	color:#bababe;
+}
+/*2-1文件路径*/
+#FilePath{padding:5px 20px;background-color: white;}
+/*2-2右侧主要内容，包括search,inquiry,statics,project,calendar-ranklist*/
+#MainContent{margin:15px 40px;}
+/*2-2-1查询框*/
+#search{padding:10px 20px;align-items: flex-start;justify-content: flex-start;margin-bottom: 10px;background-color: white;}
+#search  div,#search select,#search input{margin-right: 20px;}
+#buy-buyer{width:180px;flex-wrap: wrap;}
+#search select,#search input {width:100px;}
+#searchdetails{width:380px;flex-wrap: wrap;justify-content: space-between;}
+#search > input{align-self:center;width:50px;background-color: #00aeef;border:none;height:25px;border-radius: 2px;}
+/*2-2-2inquary框，包括历史数据，左右切换*/
+.arrow {justify-content:center;height:70px;width:30px;background-color: white;}
+.arrow .inner{
+	width:20px;
+	height:20px;
+	/*-webkit-transform:translateX(5px) rotateX(45deg);*/
+	/*transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-webkit-transform: translate(5px,0px); 为什么不能翻转后移动？*/
+	-webkit-transform:rotate(45deg);
+}
+
+#LeftArrow .inner{
+	border-left:1px solid gray;
+	border-bottom:1px solid gray;
+}
+#RightArrow .inner{
+	border-top:1px solid gray;
+	border-right:1px solid gray;
+}
+
+#inquiry{
+	justify-content: space-between;
+	background-color: #ccc;
+	margin-bottom: 10px;
+}
+
+
+#historylist{overflow:hidden;width:840px;}
+
+.different-times{
+	height:70px;
+	background-color:white;
+	margin-right:15px;
+	float:left;
+	justify-content: center;
+	flex-wrap: wrap;
+	}
+.different-times div{width:160px; justify-content: center;}
+#inquirytip{width:70px;height:70px;background-color: white;justify-content: center;}
+/*2-2-3统计数据框*/
+/*#statistics >div{justify-content: space-between;}*/
+#statistics p{color:black; margin-bottom:10px;}
+.box{
+	width:200px;
+	height:50px;
+	padding:10px;
+	border:1px solid #ccc;
+	background-color: white;
+	justify-content:space-between;
+}
+#data1{
+	border-left:5px solid #44b29e;
+}
+#data2{
+	border-left:5px solid #388ac1;
+}
+#data3{
+	border-left:5px solid #d04a36;
+}
+#data4{
+	border-left:5px solid #e2cd46;
+}
+.colorblock{width:50;height:20px;}
+#data1 .colorblock{background-color: #44b29e}
+#data2 .colorblock{background-color: #388ac1}
+#data3 .colorblock{background-color: #d04a36}
+#data4 .colorblock{background-color: #e2cd46}
+
+#data1 >div, #data2 >div,#data3 >div,#data4 >div{width:70px;height:40px;flex-wrap: wrap;justify-content: center;}
+
+/*2-2-4工程框，左右两个工程*/
+#project{margin:10px 0px;align-items: stretch;}
+#project_left{
+	width:600px;
+	border:1px solid gray;
+}
+ .pro-name{
+	padding:5px 10px;
+	background-color: #eee;
+}
+#project_left #tab-part{
+	padding:5px 10px;
+	background-color: white;
+}
+
+#title{overflow:auto;}
+#title div{
+	width:72.5px;
+	height:39px;
+	border-bottom:1px solid gray;
+	justify-content:center;
+	float:left;
+	background-color:white;}
+#title div input{border:1px solid gray ;background-color:#eee;width:45px;height:30px;}
+
+#title .activebtn{width:70.5px;border:1px solid gray;border-bottom:0;}
+#title .activebtn input{width:100%;height:100%;border:none;background-color: white;}
+#tables{width:578px;border:1px solid gray;border-top:none;padding:10px 0px;justify-content: center;}
+ table{border-collapse:collapse; border:solid 1px #eee;}
+#tables table td { width:100px; height:40px;  border:solid 1px #eee; padding:5px; }
+ #project_right{
+	width:400px;
+	border:1px solid gray;
+	background-color: white;
+}
+#righttable{padding:5px 27px;}
+#project_right table{
+	margin:20px auto;
+}
+
+#project_right table caption{text-align: left;margin-bottom:5px;color:black;font-size: 20px;}
+#project_right table td{border:solid 1px #eee;vertical-align: top;}
+ table input{border:none;width:100%;height:50px;padding-top:0px;}
+#describtion{height: 130px;width:100%;border:0;}
+#sub-btn{margin-left:190px;height:20px;width:40px;border-radius: 3px;border:none;background-color: #2189bf;}
+/*2-2-5日历和排行榜*/
+/*日历*/
+#calendar-ranklist{margin:10px 0px;align-items: stretch;}
+#calendar{width:450px;margin:5px;background-color: white;}
+#date{margin:5px 20px;}
+#date select,#date input{width:24%;height: 30px;}
+#date input{border:none;}
+#calendar table{width:410px;margin:0 auto;box-sizing:border-box;color:black;border:none;border-bottom:1px solid #ccc;}
+#calendar table th,#calendar table td{height:50px; width:14.3% ;text-align:center;font-size: 13px;}
+#calendar table td p{margin:5px;overflow:auto;}
+#calendar table th{height:30px;border-top:1px solid #2189bf;border-bottom:1px solid #ccc;}
+ .notedate{border:1px solid red;}
+/*排行榜*/
+#RankingList{width:550px;margin:5px;background-color: white;}
+#RankingList table{
+	width:510px;
+	margin:10px 20px;
+	color:black;
+	border:1px solid gray;
+}
+.col1,.col2{width:20%;height:30px;border:1px solid #ccc;}
+.col3{width:60%;height:30px;border:1px solid #ccc;}
+.col3 div{display:inline-block;margin-left:30px;}
+.col3 .propertybar{width:100px;height:5px;background-color: orange;}
